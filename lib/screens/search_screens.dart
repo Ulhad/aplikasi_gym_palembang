@@ -1,6 +1,7 @@
+import 'package:aplikasi_gym_palembang/Models/Gym.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi_gym_palembang/data/gym_data.dart';
-import '../models/gym.dart'; // Sesuaikan dengan struktur folder Anda
+import '../Models/Gym.dart'; // Sesuaikan dengan struktur folder Anda
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);

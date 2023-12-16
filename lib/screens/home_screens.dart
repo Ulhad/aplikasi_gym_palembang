@@ -3,7 +3,6 @@ import 'package:aplikasi_gym_palembang/data/gym_data.dart';
 import '../models/gym.dart'; // Sesuaikan dengan struktur folder Anda
 import '../widgets/item_card.dart'; // Sesuaikan dengan struktur folder Anda
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:aplikasi_gym_palembang/models/gym.dart';
+import 'package:aplikasi_gym_palembang/Models/Gym.dart';
 
 class DetailScreen extends StatefulWidget {
   final Gym gym;

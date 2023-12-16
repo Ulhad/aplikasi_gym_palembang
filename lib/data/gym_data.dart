@@ -121,7 +121,7 @@ var gymList = [
     isFavorite: false,
   ),
   Gym(
-    name: 'BFF Fitness',
+    name: 'Boss Gym',
     location: 'Jl. R. Sukamto No.95, 8 Ilir, Kec. Ilir Tim. II, Kota Palembang, Sumatera Selatan 30164',
     description:
     'BFF Fitness adalah pusat kebugaran yang terletak di Jl. R. Sukamto, Palembang. Dengan jam operasional yang nyaman, gym ini menyediakan berbagai program latihan dan fasilitas untuk para anggotanya.',
@@ -129,11 +129,11 @@ var gymList = [
     type: 'Fitness Center',
     locationLatLng: [-2.985416, 104.767706],
     schedule: {'Senin - Minggu': '06:30 – 21:00'},
-    imageAsset: 'images/bff_fitness.jpeg',
+    imageAsset: 'images/boss_gym.jpeg',
     imageUrls: [
-      'https://example.com/bff_fitness_image1.jpg',
-      'https://example.com/bff_fitness_image2.jpg',
-      'https://example.com/bff_fitness_image3.jpg',
+      'https://example.com/boss_gym_image1.jpg',
+      'https://example.com/boss_gym_image2.jpg',
+      'https://example.com/boss_gym_image3.jpg',
     ],
     isFavorite: false,
   ),
