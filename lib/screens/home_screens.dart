@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:aplikasi_gym_palembang/models/gym.dart';
 import 'package:aplikasi_gym_palembang/data/gym_data.dart';
-import '../models/gym.dart'; // Sesuaikan dengan struktur folder Anda
-import '../widgets/item_card.dart'; // Sesuaikan dengan struktur folder Anda
+import 'package:aplikasi_gym_palembang/widgets/item_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Gym Palembang'),
+        title: Text('Aplikasi Gym'),
       ),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -25,8 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
         itemCount: gymList.length,
         itemBuilder: (context, index) {
           // Deklarasikan variabel gym di dalam builder
-          final Gym gym = gymList[index];
-          return ItemCard(gym: gym);
+          Gym gym = gymList[index];
+          return ItemCard(gym: Gym);
         },
       ),
     );

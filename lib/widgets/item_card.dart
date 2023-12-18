@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/gym.dart';
+import '../Models/Gym.dart';
 import 'package:aplikasi_gym_palembang/screens/detail_screens.dart';
 
 class ItemCard extends StatelessWidget {

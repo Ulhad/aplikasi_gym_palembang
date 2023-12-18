@@ -9,8 +9,6 @@ import 'package:aplikasi_gym_palembang/screens/signUp_screens.dart';
 import 'package:aplikasi_gym_palembang/screens/favorite_screens.dart';
 import 'package:aplikasi_gym_palembang/screens/home_screens.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }

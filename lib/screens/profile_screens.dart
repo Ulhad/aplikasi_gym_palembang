@@ -37,7 +37,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
       body: Stack(
         children: [
           Container(
-            height: 200, width: double.infinity, color: Colors.deepPurple,
+            height: 200, width: double.infinity, color: Colors.black,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal:16),
@@ -53,7 +53,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            border: Border.all(color: Colors.deepPurple, width: 2),
+                            border: Border.all(color: Colors.black, width: 2),
                             shape: BoxShape.circle,
                           ),
                           child: CircleAvatar(
@@ -64,7 +64,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                         if(isSignedIn)
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.camera_alt, color: Colors.deepPurple[50],),
+                            icon: Icon(Icons.camera_alt, color: Colors.black,),
                           ),
                       ],
                     ),
@@ -72,7 +72,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                 ),
                 // TODO: 3. Buat bagian profilInfo yang berisi info profil
                 SizedBox(height: 20),
-                Divider(color: Colors.deepPurple[100]),
+                Divider(color: Colors.black),
                 SizedBox(height: 4),
                 Row(
                   children: [
@@ -94,7 +94,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                   ],
                 ),
                 SizedBox(height: 4),
-                Divider(color: Colors.deepPurple[100]),
+                Divider(color: Colors.black),
                 SizedBox(height: 4),
                 Row(
                   children: [
@@ -117,7 +117,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                   ],
                 ),
                 SizedBox(height: 4),
-                Divider(color: Colors.deepPurple[100]),
+                Divider(color: Colors.black),
                 SizedBox(height: 4),
                 Row(
                   children: [
@@ -141,11 +141,12 @@ class _ProfilScreenState extends State<ProfilScreen> {
                 ),
                 // TODO: 4. Buat ProfilActions yang berisi TextButton sign in/out
                 SizedBox(height: 4),
-                Divider(color: Colors.deepPurple[100]),
+                Divider(color: Colors.black),
                 SizedBox(height: 20),
                 isSignedIn ? TextButton(
                     onPressed: signOut,
                     child: Text('Sign Out'))
+
                     : TextButton(
                     onPressed: signIn,
                     child: Text('Sign In')),
