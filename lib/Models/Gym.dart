@@ -8,7 +8,7 @@ class Gym {
   final bool isFavorite;
   final Map<String, String> schedule;
   final String imageAsset;
-  final List<double> locationLatLng;
+
 
   Gym({
     required this.name,
@@ -20,6 +20,5 @@ class Gym {
     this.isFavorite = false,
     required this.schedule,
     required this.imageAsset,
-    required this.locationLatLng,
   });
 }

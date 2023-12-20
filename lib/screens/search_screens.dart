@@ -1,7 +1,8 @@
 import 'package:aplikasi_gym_palembang/Models/Gym.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasi_gym_palembang/data/gym_data.dart';
-import '../Models/Gym.dart'; // Sesuaikan dengan struktur folder Anda
+import 'package:aplikasi_gym_palembang/Models/Gym.dart'; //
+import 'package:aplikasi_gym_palembang/screens/detail_screens.dart';// Sesuaikan dengan struktur folder Anda
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class _SearchScreenState extends State<SearchScreen> {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.deepPurple[50],
+                color: Colors.blueGrey[50],
               ),
               child: TextField(
                 controller: _searchController, // Tambahkan controller
@@ -47,7 +48,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   prefixIcon: Icon(Icons.search),
                   border: InputBorder.none,
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.deepPurple),
+                    borderSide: BorderSide(color: Colors.blueGrey),
                   ),
                   contentPadding: EdgeInsets.symmetric(
                     horizontal: 16,
@@ -59,11 +60,21 @@ class _SearchScreenState extends State<SearchScreen> {
           ),
           Expanded(
             child: ListView.builder(
+
               itemCount: _filteredGyms.length,
               itemBuilder: (context, index) {
                 final gym = _filteredGyms[index];
-                return Card(
-                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailScreen(gym: gym),
+                      ),
+                    );
+                  },
+                child: Card(
+                margin: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -95,6 +106,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       ),
                     ],
                   ),
+                ),
                 );
               },
             ),
