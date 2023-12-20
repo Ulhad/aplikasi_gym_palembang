@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:aplikasi_gym_palembang/screens/home_screens.dart';
-import 'package:aplikasi_gym_palembang/screens/search_screens.dart';
-import 'package:aplikasi_gym_palembang/screens/signIn_screens.dart';
-import 'package:aplikasi_gym_palembang/screens/signUp_screens.dart';
+import 'package:aplikasi_gym_palembang/screens/signin_Screens.dart';
+import 'package:aplikasi_gym_palembang/screens/SignUp_Screens.dart';
+import 'package:aplikasi_gym_palembang/screens/detail_screens.dart';
 import 'package:aplikasi_gym_palembang/screens/favorite_screens.dart';
+import 'package:aplikasi_gym_palembang/screens/home_screens.dart';
 import 'package:aplikasi_gym_palembang/screens/profile_screens.dart';
+import 'package:aplikasi_gym_palembang/screens/search_screens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Aplikasi Gym',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MainScreen(),
+        '/signin': (context) => SignInScreen(),
+        '/signup': (context) => SignUpScreen(),
+      },
       debugShowCheckedModeBanner: false,
+      title: 'Aplikasi Gym',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(color: Colors.blueGrey),
@@ -33,13 +40,6 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => MainScreen(),
-        '/signin': (context) => SignInScreen(),
-        '/signup': (context) => SignUpScreen(),
-        // Add other routes as needed
-      },
     );
   }
 }
